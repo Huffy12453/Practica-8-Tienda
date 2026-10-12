@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión o Registrarse</title>
+    <style>
+        body, ul, h1, h2 { margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; background: #f3f3f3; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        /* Encabezado y Navegación */
+        header { background: #131921; color: #fff; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; }
+        .search-form { display: flex; flex-grow: 1; margin: 0 20px; }
+        input, button { padding: 10px; border: none; box-sizing: border-box; }
+        .search-form input { flex-grow: 1; border-radius: 4px 0 0 4px; }
+        .search-form button { background: #febd69; border-radius: 0 4px 4px 0; font-weight: bold; cursor: pointer; }
+        nav { background: #232f3e; padding: 10px 20px; }
+        nav ul { display: flex; gap: 15px; list-style: none; }
+        nav a { color: #fff; text-decoration: none; font-size: 14px; }
+        
+        /* Contenido Principal y Formularios */
+        main { padding: 40px 20px; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        .form-card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; max-width: 350px; border: 1px solid #ddd; }
+        .form-card h2 { font-weight: normal; margin-bottom: 15px; }
+        .form-card label { display: block; margin: 10px 0 5px; font-weight: bold; font-size: 14px; }
+        .form-card input { width: 100%; border: 1px solid #a6a6a6; border-radius: 4px; }
+        .btn-submit { width: 100%; background: #f0c14b; border: 1px solid #a88734; border-radius: 4px; cursor: pointer; font-weight: bold; margin-top: 20px; }
+        
+        /* Pie de página */
+        footer { background: #131921; color: #999; text-align: center; padding: 30px 20px; margin-top: auto; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Amazon</h1>
+        <form class="search-form" action="#">
+            <input type="text" placeholder="Buscar productos, marcas y mas...">
+            <button type="submit">Buscar</button>
+        </form>
+        <div><span>Hola, Identificate</span></div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#todo">Todo</a></li>
+            <li><a href="#promociones">Ofertas del Dia</a></li>
+            <li><a href="#servicio">Servicio al Cliente</a></li>
+            <li><a href="#listas">Listas</a></li>
+            <li><a href="#tarjetas">Tarjetas de Regalo</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Formulario Iniciar Sesión -->
+        <form class="form-card" action="#">
+            <h2>Iniciar Sesion</h2>
+            <label>Direccion de e-mail o numero de telefono movil</label>
+            <input type="email" required>
+            
+            <label>Contraseña</label>
+            <input type="password" required>
+            
+            <button type="submit" class="btn-submit">Continuar</button>
+        </form>
+
+        <!-- Formulario Registro -->
+        <form class="form-card" action="#">
+            <h2>Crear cuenta</h2>
+            <label>Tu nombre</label>
+            <input type="text" placeholder="Nombre y apellido" required>
+            
+            <label>Numero de movil o e-mail</label>
+            <input type="text" required>
+            
+            <label>Contraseña</label>
+            <input type="password" placeholder="Mínimo 6 caracteres" required>
+            
+            <label>Vuelve a escribir la contraseña</label>
+            <input type="password" required>
+            
+            <button type="submit" class="btn-submit">Crear cuenta</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Manuel Hector Muñiz Garcia / N# control: 0601 / Construye Aplicacion Web</p>
+    </footer>
+
+</body>
+</html>
